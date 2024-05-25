@@ -1,4 +1,5 @@
 # Fleet Management System
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=olibos_fleet-management)](https://sonarcloud.io/summary/new_code?id=olibos_fleet-management)
 
 Welcome to the Fleet Management System project, an R&D initiative exploring the capabilities of Astro with cutting-edge features such as actions.
 
