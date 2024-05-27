@@ -11,16 +11,20 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
+    "@astrojs/node": "^8.2.5",
     "@astrojs/react": "^3.4.0",
+    "@azure/msal-node": "^2.8.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "astro": "^4.9.1",
+    "jsonwebtoken": "^9.0.2",
     "react": "19.0.0-rc-935180c7e0-20240524",
     "react-dom": "19.0.0-rc-935180c7e0-20240524",
     "typescript": "^5.4.5"
   },
   "packageManager": "yarn@4.2.2",
   "devDependencies": {
+    "@types/jsonwebtoken": "^9",
     "sass": "^1.77.2"
   }
 }
