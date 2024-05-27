@@ -1,0 +1,21 @@
+---
+import Classes from './Header.module.scss';
+type Props = {
+    class?: string;
+};
+---
+<nav class:list={[Astro.props.class, Classes.header]}>
+  <button class={Classes.toggle} aria-label="Toggle navigation" data-toggle type="button">
+    <i></i>
+  </button>
+  <a class={Classes.title} href="/">
+    <span class="align-middle">Fleet Management</span>
+  </a>
+</nav>
+<script is:inline>
+  sessionStorage.getItem("sidebar-collapsed") === "1" && document.body.classList.add("collapsed");
+</script>
+<script>
+  const toggle = document.querySelector("[data-toggle]");
+  toggle?.addEventListener("click", () => sessionStorage.setItem("sidebar-collapsed", document.body.classList.toggle("collapsed") ? '1' : '0'));
+</script>

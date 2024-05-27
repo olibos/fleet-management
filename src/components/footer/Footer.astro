@@ -1,0 +1,9 @@
+---
+import Classes from './Footer.module.scss';
+type Props = {
+    class?: string;
+};
+---
+<footer class:list={[Astro.props.class, Classes.footer]}>
+  <a href="https://github.com/olibos/fleet-management">Fleet Management &copy; {new Date().getFullYear()}</a>
+</footer>
