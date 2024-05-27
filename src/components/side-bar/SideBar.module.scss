@@ -1,0 +1,81 @@
+.title {
+  font-weight: 600;
+  font-size: 1.15rem;
+  padding: 1.15rem 1.5rem;
+  display: block;
+  color: #f8f9fa;
+  white-space: nowrap;
+  line-height: normal;
+  transition: padding 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+  opacity: 1;
+  height: fit-content;
+}
+
+:global(.collapsed) {
+  .title {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+  }
+  .nav a {
+    padding-left: 1.325rem;
+  }
+}
+
+.nav {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+
+  a {
+    display: block;
+    padding: 0.625rem 1.625rem;
+    font-weight: 400;
+    transition: background 0.1s ease-in-out;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    border-left-style: solid;
+    border-left-width: 3px;
+    color: rgba(233, 236, 239, 0.5);
+    background: #222e3c;
+    border-left-color: transparent;
+    white-space: nowrap;
+
+    svg {
+      margin-right: 0.75rem;
+      color: rgba(233, 236, 239, 0.5);
+      width: 18px;
+      height: 18px;
+      stroke-width: 2;
+    }
+
+    &.active,
+    &.active:hover {
+      color: #e9ecef;
+      background: linear-gradient(
+        90deg,
+        rgba(59, 125, 221, 0.1) 0%,
+        rgba(59, 125, 221, 0.0875) 50%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      border-left-color: #3b7ddd;
+
+      svg {
+        color: #e9ecef;
+      }
+    }
+  }
+}
+
+.icon {
+  display: inline-block;
+  line-height: 18px;
+  height: 18px;
+  width: 18px;
+  font-size: 18px;
+  text-align: center;
+  margin-right: 12px;
+}

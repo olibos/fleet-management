@@ -4,17 +4,35 @@ import Favicon32 from "@/assets/favicon/favicon-32x32.png";
 import Favicon16 from "@/assets/favicon/favicon-16x16.png";
 import SiteWebmanifest from "@/assets/favicon/site.webmanifest?url";
 import SafariPinnedTab from "@/assets/favicon/safari-pinned-tab.svg";
+type Props = {
+  title: string;
+}
+
+const { title } = Astro.props;
 ---
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width" />
-<link rel="apple-touch-icon" sizes="180x180" href={AppleTouchIcon.src} />
-<link rel="icon" type="image/svg+xml" href={Favicon32.src} />
-<link rel="icon" type="image/png" sizes={`${Favicon32.width}x${Favicon32.height}`} href={Favicon32.src} />
-<link rel="icon" type="image/png" sizes={`${Favicon16.width}x${Favicon16.height}`} href={Favicon16.src} />
-<link rel="manifest" href={SiteWebmanifest} />
-<link rel="mask-icon" href={SafariPinnedTab.src} color="#5bbad5" />
-<meta name="apple-mobile-web-app-title" content="Fleet Management" />
-<meta name="application-name" content="Fleet Management" />
-<meta name="msapplication-TileColor" content="#2d89ef" />
-<meta name="theme-color" content="#ffffff" />
+<head>
+  <title>{title}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="apple-touch-icon" sizes="180x180" href={AppleTouchIcon.src} />
+  <link rel="icon" type="image/svg+xml" href={Favicon32.src} />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes={`${Favicon32.width}x${Favicon32.height}`}
+    href={Favicon32.src}
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes={`${Favicon16.width}x${Favicon16.height}`}
+    href={Favicon16.src}
+  />
+  <link rel="manifest" href={SiteWebmanifest} />
+  <link rel="mask-icon" href={SafariPinnedTab.src} color="#5bbad5" />
+  <meta name="apple-mobile-web-app-title" content="Fleet Management" />
+  <meta name="application-name" content="Fleet Management" />
+  <meta name="msapplication-TileColor" content="#2d89ef" />
+  <meta name="theme-color" content="#ffffff" />
+</head>
