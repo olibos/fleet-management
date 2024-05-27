@@ -13,6 +13,14 @@ Our goal is to demonstrate the versatility and potential of Astro in a real-worl
     ```bash
     yarn
     ```
+- Fill the `.env` file with at least the following variables:
+    ```env
+    MSAL_APPLICATION_ID=00000000-0000-0000-0000-000000000000
+    MSAL_APPLICATION_TENANT_ID=00000000-0000-0000-0000-000000000000
+    MSAL_APPLICATION_SECRET=your_secret_here
+    JWT_SECRET="your_secret_here"
+    SITE=https://your_site_here/
+    ```
 - Run
     ```bash
     yarn run
