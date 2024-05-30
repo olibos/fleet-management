@@ -15,9 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
     permissions:
-      contents: read
-      packages: write
-      id-token: write
+        id-token: write
+        packages: write
+        contents: read
+        attestations: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
