@@ -20,6 +20,11 @@ RUN yarn build
 
 FROM node:22-alpine as runner
 
+RUN addgroup -S app \
+    && adduser -S app -G app
+
+USER app
+
 WORKDIR /app
 COPY package.json yarn.lock .yarnrc.yml ./
 COPY --from=builder /src/node_modules ./node_modules/
