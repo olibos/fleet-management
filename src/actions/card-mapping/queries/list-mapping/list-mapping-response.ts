@@ -1,0 +1,1 @@
+export type ListMappingResponse = {cardId:number, company: string, analyticId: string}[];
