@@ -4,7 +4,7 @@ import type { UpdateMappingRequest } from "./update-mapping-request";
 export async function updateMappingHandler(input: UpdateMappingRequest) {
     const connection = await mssql;
     const analyticId = (input.analyticId ?? '').trim();
-    const result = await connection.query`
+    await connection.query`
         MERGE [dbo].[TotalCardMapping] AS target
         USING (VALUES (${input.cardId},${input.company})) AS source (cardId,company)
         ON target.cardId = source.cardId AND target.company = source.company
