@@ -3,6 +3,7 @@ import { msal, REDIRECT_URI } from '@/services/msal';
 import type { User } from '@/models/user';
 import { login } from './cookie';
 import { configuration } from '@/configuration';
+import { attachCookiesToResponse } from 'node_modules/astro/dist/core/cookies';
 
 const requiredGroup = configuration.msal.requiredGroup;
 export const authCallbackMiddleware = defineMiddleware(async ({ cookies, locals, redirect, url }, next) => {
@@ -33,5 +34,13 @@ export const authCallbackMiddleware = defineMiddleware(async ({ cookies, locals,
         return new Response('Failed to acquire token', { status: 500 });
     }
 
-    return redirect('/');
+    const response = redirect('/');
+    // TODO: Warkaround in astro -> issue to be created.
+    if (!response.headers.getSetCookie()?.length) {
+        for(const cookie of cookies.headers()) {
+            response.headers.append("Set-Cookie", cookie);
+        }
+    }
+
+    return response;
 });
