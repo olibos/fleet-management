@@ -15,7 +15,7 @@ const { title = "Fleet Management" } = Astro.props;
 
 <html lang="en">
   <Head {title} />
-  <body class:list={[Classes.application, Classes.collapsed]}>
+  <body class={Classes.application}>
     <SideBar class={Classes.sidebar} />
     <Header class={Classes.header}/>
     <main class={Classes.content}>
