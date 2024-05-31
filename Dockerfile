@@ -31,4 +31,5 @@ COPY --from=builder /src/node_modules ./node_modules/
 COPY --from=builder /src/dist/server ./server/
 COPY --from=builder /src/dist/client ./client/
 
+ENV HOST=0.0.0.0
 CMD ["node", "./server/entry.mjs"]
