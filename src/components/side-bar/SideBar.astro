@@ -1,5 +1,6 @@
 ---
 
+import { Card } from '../icons/card';
 import Classes from './SideBar.module.scss';
 type Props = {
   class?: string;
@@ -12,6 +13,12 @@ type Props = {
   </a>
   <ul class={Classes.nav}>
     <li>
+      <a class={Classes.active}>
+        <Card className="align-middle" />
+        <span class="align-middle">Cartes</span>
+      </a>
+    </li>
+    <!-- <li>
       <a class={Classes.active} href="index.html">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -94,6 +101,6 @@ type Props = {
         <span class:list={["align-middle", Classes.icon]}>€</span>
         <span class="align-middle">Compta</span>
       </a>
-    </li>
+    </li> -->
   </ul>
 </nav>

@@ -13,9 +13,17 @@ type Props = {
   </a>
 </nav>
 <script is:inline>
+  const collapsePreference = sessionStorage.getItem("sidebar-collapsed");
+  if (collapsePreference === "1" || 
+      (collapsePreference === null && matchMedia("(max-width: 768px)").matches)) {
+    document.body.classList.add("collapsed");
+  }
+
   sessionStorage.getItem("sidebar-collapsed") === "1" && document.body.classList.add("collapsed");
 </script>
 <script>
   const toggle = document.querySelector("[data-toggle]");
-  toggle?.addEventListener("click", () => sessionStorage.setItem("sidebar-collapsed", document.body.classList.toggle("collapsed") ? '1' : '0'));
+  toggle?.addEventListener(
+    "click", 
+    () => sessionStorage.setItem("sidebar-collapsed", document.body.classList.toggle("collapsed") ? '1' : '0'));
 </script>
