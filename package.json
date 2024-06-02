@@ -22,6 +22,7 @@
     "astro": "^4.9.1",
     "jsonwebtoken": "^9.0.2",
     "mssql": "^10.0.2",
+    "pdfjs-dist": "^4.3.136",
     "react": "19.0.0-rc-935180c7e0-20240524",
     "react-dom": "19.0.0-rc-935180c7e0-20240524",
     "typescript": "^5.4.5"

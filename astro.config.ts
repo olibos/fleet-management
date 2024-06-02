@@ -14,4 +14,11 @@ export default defineConfig({
     mode: "standalone"
   }),
   site: process.env.SITE,
+  vite:{
+    build:{
+      assetsInlineLimit(filePath, _content) {
+        if (filePath.endsWith('.webmanifest')) return false;
+      },
+    },
+  }
 });
