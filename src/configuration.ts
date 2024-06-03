@@ -35,5 +35,9 @@ export const configuration = Object.freeze({
         algorithm: (env.JWT_ALGORITHM || 'HS256') as Algorithm,
         expires: env.JWT_EXPIRES && !isNaN(+env.JWT_EXPIRES) ? +env.JWT_EXPIRES : 30 * 60,
         cookieName: env.JWT_COOKIE_NAME || '.auth',
+    },
+    wallbox: {
+        username: env.WALLBOX_USERNAME,
+        password: env.WALLBOX_PASSWORD
     }
 });

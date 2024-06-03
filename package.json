@@ -23,6 +23,7 @@
     "jsonwebtoken": "^9.0.2",
     "mssql": "^10.0.2",
     "pdfjs-dist": "^4.3.136",
+    "pdfmake": "^0.2.10",
     "react": "19.0.0-rc-935180c7e0-20240524",
     "react-dom": "19.0.0-rc-935180c7e0-20240524",
     "typescript": "^5.4.5"
@@ -30,6 +31,7 @@
   "packageManager": "yarn@4.2.2",
   "devDependencies": {
     "@types/jsonwebtoken": "^9",
+    "@types/pdfmake": "^0.2.9",
     "sass": "^1.77.2"
   }
 }
