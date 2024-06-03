@@ -1,13 +1,14 @@
 import { configuration } from "@/configuration";
 
 const wallbox = configuration.wallbox;
+const Authorization = `Basic ${Buffer.from(`${wallbox.username}:${wallbox.password}`).toString('base64')}`;
 export async function login() {
     const response = await fetch(
         'https://user-api.wall-box.com/users/signin',
         {
             headers: {
+                Authorization,
                 'Partner': 'wallbox',
-                'Authorization': `Basic ${Buffer.from(`${wallbox.username}:${wallbox.password}`).toString('base64')}`,
                 "Accept": "application/json",
                 "Content-Type": "application/json;charset=UTF-8",
                 "User-Agent": "HomeAssistantWallboxPlugin/1.0.0",
