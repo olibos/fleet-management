@@ -26,7 +26,7 @@ RUN addgroup -S app \
 USER app
 
 WORKDIR /app
-COPY package.json yarn.lock .yarnrc.yml ./
+COPY package.json yarn.lock .yarnrc.yml Roboto*.ttf ./
 COPY --from=builder /src/node_modules ./node_modules/
 COPY --from=builder /src/dist/server ./server/
 COPY --from=builder /src/dist/client ./client/
