@@ -1,6 +1,7 @@
 import { configuration } from "@/configuration";
 
 const wallbox = configuration.wallbox;
+
 export async function login() {
     const response = await fetch(
         'https://user-api.wall-box.com/users/signin',
