@@ -7,7 +7,7 @@ export async function login() {
         {
             headers: {
                 'Partner': 'wallbox',
-                'Authorization': `Basic ${Buffer.from(`${wallbox.username}:${wallbox.password}`).toString('base64')}`,
+                'Authorization': `Basic ${Buffer.from([wallbox.username, wallbox.password].join(':')).toString('base64')}`,
                 "Accept": "application/json",
                 "Content-Type": "application/json;charset=UTF-8",
                 "User-Agent": "HomeAssistantWallboxPlugin/1.0.0",
