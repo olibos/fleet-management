@@ -15,6 +15,12 @@ const killoWattHourFormatter = new Intl.NumberFormat('fr', { maximumFractionDigi
 const periodFormatter = new Intl.DateTimeFormat('fr', { month: 'long', year: 'numeric' });
 const priceFormatter = new Intl.NumberFormat('fr', { style: 'currency', currency: 'EUR' });
 
+const regions = new Map([
+    ["Wallonia", "Wallonie"],
+    ["Flanders", "Flandre"],
+    ["Brussels", "Bruxelles"],
+])
+
 export const GET: APIRoute = async (context) => {
     const { period, supplierId } = context.params;
     if (!period || !supplierId) return new Response("bad request", { status: 400 });
@@ -78,7 +84,7 @@ function getSummaryPage(detail: EvPeriodDetails, data: GetSessionListResult["dat
                 widths: ["*", "*"],
                 body: [
                     [th("Employé"), { text: detail.name, alignment: 'center', fillColor: oddRowFillColor}],
-                    [th("Région"), { text: detail.region, alignment: 'right'}],
+                    [th("Région"), { text: regions.get(detail.region) || detail.region, alignment: 'right'}],
                     [th("Compteur"), { text: detail.hasDigitalMeter ? "Digital" : "Classique", alignment: 'right', fillColor: oddRowFillColor}],
                     [th("Mois"), { text: periodFormatter.format(detail.period), alignment: 'right'}],
                     [th("Tarif CREG"), { text: numberFormatter.format(detail.tariff) + " c€/kWh", alignment: 'right', fillColor: oddRowFillColor, link: `https://www.creg.be/sites/default/files/assets/Prices/Dashboard/tableaudebord${detail.period.getFullYear()}${twoDigits(detail.period.getMonth() + 1)}.pdf#page=5`}],
