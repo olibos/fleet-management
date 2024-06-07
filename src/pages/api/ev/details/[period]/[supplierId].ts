@@ -77,11 +77,29 @@ function getSummaryPage(detail: EvPeriodDetails, data: GetSessionListResult["dat
     const total = data.reduce((sum, item) => sum + item.attributes.energy, 0);
     return [
         {
-            svg: Logo,
+            table:{
+                widths: ["auto", "*", "auto"],
+                body: [
+                    [
+                        { svg: Logo, width: 200, marginTop: 15, alignment: "center" },  
+                        "",
+                        [
+                            {text:"Wavenet srl", bold:true, fontSize: 14},
+                            "Rue de l'Artisanat 16",
+                            "7900 Leuze-en-Hainaut",
+                            "Tel : 069/67.03.35"
+                        ]
+                    ],
+                ]
+            },
+            layout:{
+                defaultBorder: false
+            }
         },
         {
             text: "Remboursement des frais de recharge",
             style: 'header',
+            marginTop: 20
         },
         {
             table: {
