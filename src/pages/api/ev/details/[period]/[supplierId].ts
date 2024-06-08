@@ -5,6 +5,7 @@ import PdfPrinter from "pdfmake";
 import { twoDigits } from '@/helpers/two-digits';
 import type { Content, TableCell } from 'pdfmake/interfaces';
 import { formatDuration } from "@/helpers/format-duration";
+import Logo from '@/assets/images/logo.svg?raw';
 
 const headerRowFillColor = '#156082';
 const oddRowFillColor = '#c0e6f5';
@@ -76,8 +77,29 @@ function getSummaryPage(detail: EvPeriodDetails, data: GetSessionListResult["dat
     const total = data.reduce((sum, item) => sum + item.attributes.energy, 0);
     return [
         {
+            table:{
+                widths: ["auto", "*", "auto"],
+                body: [
+                    [
+                        { svg: Logo, width: 200, marginTop: 15, alignment: "center" },  
+                        "",
+                        [
+                            {text:"Wavenet srl", bold:true, fontSize: 14},
+                            "Rue de l'Artisanat 16",
+                            "7900 Leuze-en-Hainaut",
+                            "Tel : 069/67.03.35"
+                        ]
+                    ],
+                ]
+            },
+            layout:{
+                defaultBorder: false
+            }
+        },
+        {
             text: "Remboursement des frais de recharge",
             style: 'header',
+            marginTop: 20
         },
         {
             table: {
@@ -88,7 +110,7 @@ function getSummaryPage(detail: EvPeriodDetails, data: GetSessionListResult["dat
                     [th("Compteur"), { text: detail.hasDigitalMeter ? "Digital" : "Classique", alignment: 'right', fillColor: oddRowFillColor}],
                     [th("Mois"), { text: periodFormatter.format(detail.period), alignment: 'right'}],
                     [th("Tarif CREG"), { text: numberFormatter.format(detail.tariff) + " c€/kWh", alignment: 'right', fillColor: oddRowFillColor, link: `https://www.creg.be/sites/default/files/assets/Prices/Dashboard/tableaudebord${detail.period.getFullYear()}${twoDigits(detail.period.getMonth() + 1)}.pdf#page=5`}],
-                    [th("Consommation"), { text: killoWattHourFormatter.format(total) + " kWh", alignment: 'right', linkToPage: 2}],
+                    [th("Consommation"), { text: killoWattHourFormatter.format(total) + " kWh", alignment: 'right', linkToPage: 2 }],
                     [th("Remboursement"), { text: priceFormatter.format(total * detail.tariff / 100.0), alignment: 'right', fillColor: oddRowFillColor}],
                 ],
             },
