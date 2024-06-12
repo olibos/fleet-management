@@ -341,7 +341,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@azure/msal-node@npm:^2.5.1":
+"@azure/msal-node@npm:^2.5.1, @azure/msal-node@npm:^2.9.2":
   version: 2.9.2
   resolution: "@azure/msal-node@npm:2.9.2"
   dependencies:
@@ -3671,6 +3671,7 @@ __metadata:
     "@astrojs/check": "npm:^0.7.0"
     "@astrojs/node": "npm:^8.2.5"
     "@astrojs/react": "npm:^3.5.0"
+    "@azure/msal-node": "npm:^2.9.2"
     "@tanstack/react-query": "npm:^5.40.1"
     "@types/jsonwebtoken": "npm:^9.0.6"
     "@types/mssql": "npm:^9.1.5"
