@@ -24,7 +24,7 @@ const getRowId: GetRowIdFunc<Data> = ({data}) => `${data.cardId}-${data.company}
 export function Grid() {
     const [client] = useState(() => new QueryClient());
     const { data, refetch } = useQuery({
-        queryFn: () => actions.listCardMapping(),
+        queryFn: () => actions.listCardMapping(undefined),
         queryKey: ["listCardMapping"],
     }, client);
 
