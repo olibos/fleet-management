@@ -12,6 +12,7 @@ FROM node:22-alpine AS builder
 WORKDIR /src
 
 COPY package.json yarn.lock .yarnrc.yml astro.config.ts tsconfig.json ./
+COPY ./public/ ./public/
 COPY ./src/ ./src/
 COPY --from=dependencies /src/.yarn ./.yarn/
 COPY --from=dependencies /src/node_modules ./node_modules/
