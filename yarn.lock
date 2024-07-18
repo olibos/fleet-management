@@ -1979,23 +1979,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ag-grid-community@npm:31.3.2":
-  version: 31.3.2
-  resolution: "ag-grid-community@npm:31.3.2"
-  checksum: 10c0/01cb0e3c7593e96c7635cc74e7f68d7fb1721e8122ab58a367eec9be21f6ae73f4038c0782644785c7e64b75890cf71334465ad4c3011781fab592f1d118509e
+"ag-charts-types@npm:10.0.2":
+  version: 10.0.2
+  resolution: "ag-charts-types@npm:10.0.2"
+  checksum: 10c0/f1d1ec796c9372284d9237c126d08f6f11ec4b18fbd7bbb34b363e12cfc8ff635ee6b0e893aa47576de6048839f1098e249e14afe2d25d8d7bba4c3dc1d1a26f
   languageName: node
   linkType: hard
 
-"ag-grid-react@npm:^31.3.2":
-  version: 31.3.2
-  resolution: "ag-grid-react@npm:31.3.2"
+"ag-grid-community@npm:32.0.2":
+  version: 32.0.2
+  resolution: "ag-grid-community@npm:32.0.2"
   dependencies:
-    ag-grid-community: "npm:31.3.2"
+    ag-charts-types: "npm:10.0.2"
+  checksum: 10c0/af77668e7dabad4812340cea5f050c9d7eb1d27651494755912359109d72cfe70b385ed4f535dce091c7e5b3a2933beb892d060d3fb1dc1ad595ad25d5d6a49c
+  languageName: node
+  linkType: hard
+
+"ag-grid-react@npm:^32.0.2":
+  version: 32.0.2
+  resolution: "ag-grid-react@npm:32.0.2"
+  dependencies:
+    ag-grid-community: "npm:32.0.2"
     prop-types: "npm:^15.8.1"
   peerDependencies:
     react: ^16.3.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.3.0 || ^17.0.0 || ^18.0.0
-  checksum: 10c0/2cf11ffda0b12a336f71808de99bd56cba57245284b4d6ef3afff6b37d37c83e0a75743625f510fae00253a6722c2b72bac47cbea6da70e44f44a0aecb283fe7
+  checksum: 10c0/5834ce91061823a8ca97a065d137484a6622069cf5cd63ef1c130bbfad33fee119c1e3e5bc19cbb7fc472bbca18a4e435b5c6017363e8729b8a46b830489ccfc
   languageName: node
   linkType: hard
 
@@ -3275,7 +3284,7 @@ __metadata:
     "@types/pdfmake": "npm:^0.2.9"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
-    ag-grid-react: "npm:^31.3.2"
+    ag-grid-react: "npm:^32.0.2"
     astro: "npm:^4.11.1"
     jsonwebtoken: "npm:^9.0.2"
     mssql: "npm:^11.0.0"
