@@ -18,8 +18,8 @@ export class TotalCardService {
 
     readonly #cookies = new CookieJar();
     readonly #fetch;
-    #$: CheerioAPI = null!;
-    #companyName: string = null!;
+    #$: CheerioAPI = load('');
+    #companyName?: string;
     #invoiceExcelLink: string | undefined;
     #invoicePdfLink: string | undefined;
 
@@ -57,8 +57,8 @@ export class TotalCardService {
         const script = this.#$(`a[href*="${partialUrl}"]`).attr("href");
         if (!script) return;
     
-        const start = script.indexOf('(') + 2,
-            end = script.indexOf(')') - 1;
+        const start = script.indexOf('(') + 2;
+        const end = script.indexOf(')') - 1;
         return script.substring(start, end);
     }
     
@@ -94,7 +94,7 @@ export class TotalCardService {
                 this.#getField("conv_ID"),
             ]));
 
-        this.#invoicePdfLink = this.#getLink("/secure/clients/factures/recherche.do"),
+        this.#invoicePdfLink = this.#getLink("/secure/clients/factures/recherche.do");
         this.#invoiceExcelLink = this.#getLink("/secure/clients/rapports/telechargement/informationsgenerales.do");
     }
 
