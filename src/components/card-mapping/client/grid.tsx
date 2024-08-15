@@ -23,8 +23,8 @@ const getRowId: GetRowIdFunc<Data> = ({data}) => `${data.cardId}-${data.company}
 
 export function Grid() {
     const [client] = useState(() => new QueryClient());
-    const { data, refetch } = useQuery({
-        queryFn: () => actions.listCardMapping(undefined),
+    const { data, refetch, error } = useQuery({
+        queryFn: () => actions.listCardMapping.orThrow(),
         queryKey: ["listCardMapping"],
     }, client);
 
@@ -43,14 +43,17 @@ export function Grid() {
             className="ag-theme-quartz"
             style={{ height: '100%' }}
         >
-            <AgGridReact<ListMappingResponse[number]>
-                rowData={data}
-                columnDefs={colDefs}
-                defaultColDef={defaultColDef}
-                onCellValueChanged={handleChange}
-                rowSelection="single"
-                getRowId={getRowId}
-            />
+            {!error
+                ? <AgGridReact<Data>
+                    rowData={data}
+                    columnDefs={colDefs}
+                    defaultColDef={defaultColDef}
+                    onCellValueChanged={handleChange}
+                    rowSelection="single"
+                    getRowId={getRowId}
+                />
+                : <div className="error">{error.message}</div>
+            }
         </div>
     )
 }
