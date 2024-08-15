@@ -1,5 +1,4 @@
-/// <reference path="../.astro/actions.d.ts" />
-/// <reference types="astro/client" />
+/// <reference path="../.astro/types.d.ts" />
 
 type User = import('@/models/user').User;
 declare namespace App {

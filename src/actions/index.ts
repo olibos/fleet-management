@@ -5,7 +5,6 @@ import { updateMappingHandler } from "./card-mapping/commands/update-mapping/upd
 
 export const server = {
     listCardMapping: defineAction({
-        input: z.undefined(),
         handler: listHandler
     }),
     updateCardMapping: defineAction({
