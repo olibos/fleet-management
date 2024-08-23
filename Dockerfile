@@ -1,4 +1,4 @@
-FROM node:22.6.0-alpine AS dependencies
+FROM node:22.7.0-alpine AS dependencies
 
 WORKDIR /src
 
@@ -7,7 +7,7 @@ COPY .yarn/ ./.yarn/
 
 RUN yarn install --immutable
 
-FROM node:22.6.0-alpine AS builder
+FROM node:22.7.0-alpine AS builder
 
 WORKDIR /src
 
@@ -19,7 +19,7 @@ COPY --from=dependencies /src/node_modules ./node_modules/
 
 RUN yarn build
 
-FROM node:22.6.0-alpine AS runner
+FROM node:22.7.0-alpine AS runner
 
 RUN addgroup -S app \
     && adduser -S app -G app
