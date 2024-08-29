@@ -2291,8 +2291,8 @@ __metadata:
   linkType: hard
 
 "astro@npm:^4.14.2":
-  version: 4.15.0
-  resolution: "astro@npm:4.15.0"
+  version: 4.15.1
+  resolution: "astro@npm:4.15.1"
   dependencies:
     "@astrojs/compiler": "npm:^2.10.3"
     "@astrojs/internal-helpers": "npm:0.4.1"
@@ -2324,6 +2324,7 @@ __metadata:
     esbuild: "npm:^0.21.5"
     estree-walker: "npm:^3.0.3"
     fast-glob: "npm:^3.3.2"
+    fastq: "npm:^1.17.1"
     flattie: "npm:^1.1.1"
     github-slugger: "npm:^2.0.0"
     gray-matter: "npm:^4.0.3"
@@ -2365,7 +2366,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/5320627240d1032f14460e9219dfda073489267bb141c12f54760fbac1ce3d051522ae12709de94f0d63e264088b0282d3723af4aab53fb31d2050dc3e94bf46
+  checksum: 10c0/be5a1b94d4a4d13343839fd7e301c486339aab8e5478abc1d531e9046728de88b5eaa49e1bd6595a04e4ba60cf6b1a83d28a5877475253b66785ae90f245e137
   languageName: node
   linkType: hard
 
@@ -3502,7 +3503,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fastq@npm:^1.6.0":
+"fastq@npm:^1.17.1, fastq@npm:^1.6.0":
   version: 1.17.1
   resolution: "fastq@npm:1.17.1"
   dependencies:
