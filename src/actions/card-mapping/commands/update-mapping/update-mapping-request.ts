@@ -1,4 +1,4 @@
-import {z} from 'astro:actions';
+import { z } from 'astro:schema';
 export const updateMappingRequest = z.object({
     cardId: z.number().gt(0),
     company: z.string().min(1),
