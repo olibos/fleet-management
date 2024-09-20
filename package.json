@@ -35,7 +35,6 @@
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.6",
     "@types/pdfmake": "^0.2.9",
-    "@types/tough-cookie": "^4",
     "sass": "^1.77.8"
   }
 }
