@@ -110,14 +110,14 @@ __metadata:
   linkType: hard
 
 "@astrojs/node@npm:^8.3.3":
-  version: 8.3.3
-  resolution: "@astrojs/node@npm:8.3.3"
+  version: 8.3.4
+  resolution: "@astrojs/node@npm:8.3.4"
   dependencies:
-    send: "npm:^0.18.0"
+    send: "npm:^0.19.0"
     server-destroy: "npm:^1.0.1"
   peerDependencies:
     astro: ^4.2.0
-  checksum: 10c0/e167d5eadff2c8ad0f85ec49c02911d9ddf106b2617577b9eaff42f6eebc6ed278378dc09051edda1ade72eeec568dcd2dcd3306e7673363496c17d87cd96a51
+  checksum: 10c0/d8a1b9a11490768f7ad5f09eba6a4abf4d44a9f8cfc42cab851bf003409918f589be57fe4195a63f0e3450caaebc45ade7287765de56f35f175e2a12b49ad1b5
   languageName: node
   linkType: hard
 
@@ -6516,9 +6516,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"send@npm:^0.18.0":
-  version: 0.18.0
-  resolution: "send@npm:0.18.0"
+"send@npm:^0.19.0":
+  version: 0.19.0
+  resolution: "send@npm:0.19.0"
   dependencies:
     debug: "npm:2.6.9"
     depd: "npm:2.0.0"
@@ -6533,7 +6533,7 @@ __metadata:
     on-finished: "npm:2.4.1"
     range-parser: "npm:~1.2.1"
     statuses: "npm:2.0.1"
-  checksum: 10c0/0eb134d6a51fc13bbcb976a1f4214ea1e33f242fae046efc311e80aff66c7a43603e26a79d9d06670283a13000e51be6e0a2cb80ff0942eaf9f1cd30b7ae736a
+  checksum: 10c0/ea3f8a67a8f0be3d6bf9080f0baed6d2c51d11d4f7b4470de96a5029c598a7011c497511ccc28968b70ef05508675cebff27da9151dd2ceadd60be4e6cf845e3
   languageName: node
   linkType: hard
 
