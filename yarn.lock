@@ -354,13 +354,13 @@ __metadata:
   linkType: hard
 
 "@azure/msal-node@npm:^2.11.1, @azure/msal-node@npm:^2.9.2":
-  version: 2.14.0
-  resolution: "@azure/msal-node@npm:2.14.0"
+  version: 2.15.0
+  resolution: "@azure/msal-node@npm:2.15.0"
   dependencies:
     "@azure/msal-common": "npm:14.15.0"
     jsonwebtoken: "npm:^9.0.0"
     uuid: "npm:^8.3.0"
-  checksum: 10c0/6a8a71cf10b5e1cfeff6ebd5bba55e2a63e4eb4c4a947a9db4574cd4afb596e077425bcb44282352f3b8633cc2b9cf95b926541cafb43fc04f328f9b126e3f8f
+  checksum: 10c0/de88bc4a5b44fbbd9e63cb943c1833b3d752181310cd33fe61e282ec5091e6c9c2c10363b7f89b0eb55dc092cd1d161d23cf2dcfda7f2c2a114fec2a85cdea8c
   languageName: node
   linkType: hard
 
