@@ -5863,14 +5863,14 @@ __metadata:
   linkType: hard
 
 "pdfmake@npm:^0.2.10":
-  version: 0.2.13
-  resolution: "pdfmake@npm:0.2.13"
+  version: 0.2.14
+  resolution: "pdfmake@npm:0.2.14"
   dependencies:
     "@foliojs-fork/linebreak": "npm:^1.1.1"
     "@foliojs-fork/pdfkit": "npm:^0.14.0"
     iconv-lite: "npm:^0.6.3"
     xmldoc: "npm:^1.1.2"
-  checksum: 10c0/dce949fe9cd2abf08b15c3d04081a95d9511b725c683020577bcba88e3781407b84db1192176e21744b17422aa6d5f450041e53c88100708c5de59753d9ffb58
+  checksum: 10c0/afda9431d2da9fe90dfa5196d174e777a6f7835c3e92780f0fc4ad654467a8ff7f098803b5b7457158468196bd6c6a6cbc70f64a8435e832b0b644aeb60c197a
   languageName: node
   linkType: hard
 
