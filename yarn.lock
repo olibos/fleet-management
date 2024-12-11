@@ -2085,32 +2085,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ag-charts-types@npm:10.3.3":
-  version: 10.3.3
-  resolution: "ag-charts-types@npm:10.3.3"
-  checksum: 10c0/7105287e9b11bfc4c78e03a8da2d567486ba0611d223d27af1ac8ebfdcea7d792b0bc07182b90995c1c79c53349d06954b38e0c9ab9fae48b411d435937b2ad4
+"ag-charts-types@npm:11.0.0":
+  version: 11.0.0
+  resolution: "ag-charts-types@npm:11.0.0"
+  checksum: 10c0/5e48add9d3f64b5b8dd75d01d4ef5d82601e866f680c8568b6eebeb6422a3d3be7825ffcc6d586abd5ffe8c778372fbc4b373ef0d463ab809e5ece9512f6a49b
   languageName: node
   linkType: hard
 
-"ag-grid-community@npm:32.3.3":
-  version: 32.3.3
-  resolution: "ag-grid-community@npm:32.3.3"
+"ag-grid-community@npm:33.0.0":
+  version: 33.0.0
+  resolution: "ag-grid-community@npm:33.0.0"
   dependencies:
-    ag-charts-types: "npm:10.3.3"
-  checksum: 10c0/577de02acc08db73a3c1366b52792f7111b58d0115d93ba924f9ebbe1bde833e504b4385b93d258eff7393ff76693359ad8dd956a5ce79417d888172cf9a8019
+    ag-charts-types: "npm:11.0.0"
+  checksum: 10c0/7aaedcee544f3abadd2cfbca858f46856411d5b0abaa000c2a909a6e727094566e840e12838075dcfdf2df8196fd8391457fc3207bccd7ccb6a7c80021a77e39
   languageName: node
   linkType: hard
 
-"ag-grid-react@npm:^32.0.2":
-  version: 32.3.3
-  resolution: "ag-grid-react@npm:32.3.3"
+"ag-grid-react@npm:^33.0.0":
+  version: 33.0.0
+  resolution: "ag-grid-react@npm:33.0.0"
   dependencies:
-    ag-grid-community: "npm:32.3.3"
+    ag-grid-community: "npm:33.0.0"
     prop-types: "npm:^15.8.1"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10c0/d0e5cb2f1c788b6c9709df87e5c034996ccbf802117caf242d09aef2a30c056d76775784e31ff6285a4754f14dabb2c3ca0dec29a2bf44041b529b48354897ed
+  checksum: 10c0/22f6c49a4a19665611d9e0cd9c2939335cc53fc4218fe217d077027f6bf5ce3248af7d9ca78701315d76751f5bcd853008cdc1323bc0c8b5eaadc4de441a6132
   languageName: node
   linkType: hard
 
@@ -3391,7 +3391,7 @@ __metadata:
     "@types/pdfmake": "npm:^0.2.9"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
-    ag-grid-react: "npm:^32.0.2"
+    ag-grid-react: "npm:^33.0.0"
     astro: "npm:^4.14.2"
     cheerio: "npm:^1.0.0-rc.12"
     fetch-cookie: "npm:^3.0.1"
