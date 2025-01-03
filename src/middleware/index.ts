@@ -4,4 +4,4 @@ import { authMiddleware } from "./auth";
 import { authCallbackMiddleware } from "./auth-callback";
 import { corsMiddleware } from "./cors";
 
-export const onRequest = sequence(corsMiddleware, cookieMiddleware, authCallbackMiddleware, authMiddleware);
+export const onRequest = sequence(/*corsMiddleware, */cookieMiddleware, authCallbackMiddleware, authMiddleware);

@@ -1,43 +1,22 @@
-import type { Algorithm } from "jsonwebtoken";
-
-const env: ImportMetaEnv = {...import.meta.env, ...process.env};
+import baseConfiguration from 'wavenet:config/server'
 
 type DbSettings = { connectionString: string } | { server: string; database: string; };
 
-function getDbSettings(): DbSettings {
-    if (env.DB_CONNECTION_STRING) {
+export const configuration = baseConfiguration;
+export function getDbSettings(): DbSettings {
+    const { server, name: database, connectionString } = configuration.db;
+    if (connectionString) {
         return {
-            connectionString: env.DB_CONNECTION_STRING
+            connectionString: connectionString
         }
     }
 
-    if (env.DB_SERVER && env.DB_NAME) {
+    if (server && database) {
         return {
-            server: env.DB_SERVER,
-            database: env.DB_NAME
+            server,
+            database,
         }
     }
 
     throw new Error("Missing DB Settings.")
 }
-
-export const configuration = Object.freeze({
-    msal:{
-        applicationId: env.MSAL_APPLICATION_ID,
-        tenantId: env.MSAL_APPLICATION_TENANT_ID,
-        secret: env.MSAL_APPLICATION_SECRET,
-        requiredGroup: env.MSAL_REQUIRED_GROUP,
-    },
-    db: getDbSettings(),
-    site: new URL(env.SITE),
-    jwt: {
-        secret: env.JWT_SECRET,
-        algorithm: (env.JWT_ALGORITHM || 'HS256') as Algorithm,
-        expires: env.JWT_EXPIRES && !isNaN(+env.JWT_EXPIRES) ? +env.JWT_EXPIRES : 30 * 60,
-        cookieName: env.JWT_COOKIE_NAME || '.auth',
-    },
-    wallbox: {
-        username: env.WALLBOX_USERNAME,
-        password: env.WALLBOX_PASSWORD
-    }
-});

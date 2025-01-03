@@ -1,22 +1,28 @@
 import { configuration } from '@/configuration';
-import {ConfidentialClientApplication, type Configuration, LogLevel} from '@azure/msal-node';
+import {ConfidentialClientApplication, LogLevel} from '@azure/msal-node';
 
-const msalConfig: Configuration = {
-    auth: {
-        clientId: configuration.msal.applicationId,
-        authority: `https://login.microsoftonline.com/${configuration.msal.tenantId}`,
-        clientSecret: configuration.msal.secret,
+let _redirectUri: URL;
+let _msal: ConfidentialClientApplication
+export default {
+    get redirectUri() {
+        return _redirectUri ??= new URL('/.auth/login/callback', configuration.site);
     },
-    system: {
-        loggerOptions: {
-            loggerCallback(loglevel, message, containsPii) {
-                console.log(message);
+    get msal() {
+        return _msal ??= new ConfidentialClientApplication({
+            auth: {
+                clientId: configuration.msal.applicationId,
+                authority: `https://login.microsoftonline.com/${configuration.msal.applicationTenantId}`,
+                clientSecret: configuration.msal.applicationSecret,
             },
-            piiLoggingEnabled: false,
-            logLevel: LogLevel.Verbose,
-        }
+            system: {
+                loggerOptions: {
+                    loggerCallback(_loglevel, message, _containsPii) {
+                        console.log(message);
+                    },
+                    piiLoggingEnabled: false,
+                    logLevel: LogLevel.Verbose,
+                }
+            }
+        });
     }
-};
-
-export const REDIRECT_URI = new URL('/.auth/login/callback', configuration.site);
-export const msal = new ConfidentialClientApplication(msalConfig);
+}
