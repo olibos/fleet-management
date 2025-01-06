@@ -58,7 +58,7 @@ export function configurationWrapper(): AstroIntegration {
                 const schema = config.env.schema;
                 if (!schema) return;
                 const path = config.vite.envDir ?? fileURLToPath(config.root);
-                config = updateConfig({
+                updateConfig({
                     vite: {
                         plugins: [
                             {
