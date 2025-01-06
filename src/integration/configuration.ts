@@ -44,7 +44,7 @@ function resolveTypes(structure: Record<string, unknown>) {
     return JSON
             .stringify(structure)
             .replaceAll(
-                /"\$[^\$]+\$"/g, 
+                /"\$[^$]+\$"/g, 
                 types => {
                     const result = JSON.parse(types) as string;
                     return result.substring(1, result.length - 1);
