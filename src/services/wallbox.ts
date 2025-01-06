@@ -21,7 +21,7 @@ export async function login() {
 }
 
 export async function getSessionList(token: string, chargerId: number, start: Date, end?: Date) {
-    start.setHours(0, 0, 0);
+    start.setHours(0, 0, 0, 0);
     if (!end) {
         end = new Date(start);
         end.setMonth(end.getMonth() + 1);
