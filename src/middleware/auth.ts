@@ -1,15 +1,15 @@
 import { defineMiddleware } from 'astro:middleware';
-import { msal, REDIRECT_URI } from '@/services/msal';
+import auth from '@/services/msal';
 
 export const authMiddleware = defineMiddleware(async ({ request, redirect, locals, url }, next) => {
     if (locals.user) return next();
     const authCodeUrlParameters = {
         scopes: ['User.Read'],
-        redirectUri: REDIRECT_URI.toString(),
+        redirectUri: auth.redirectUri.toString(),
     };
 
     try {
-        const authUrl = await msal.getAuthCodeUrl(authCodeUrlParameters);
+        const authUrl = await auth.msal.getAuthCodeUrl(authCodeUrlParameters);
         return redirect(authUrl);
     } catch (error) {
         console.error('Error generating auth URL:', error);

@@ -1,7 +1,7 @@
 import sql from 'mssql';
-import { configuration } from '@/configuration'
+import { getDbSettings } from '@/configuration'
 
-const sqlConfig = configuration.db;
+const sqlConfig = getDbSettings();
 const connection = 'connectionString' in sqlConfig 
     ? new sql.ConnectionPool(sqlConfig.connectionString)
     : new sql.ConnectionPool({

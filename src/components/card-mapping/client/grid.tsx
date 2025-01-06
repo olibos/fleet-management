@@ -19,7 +19,7 @@ const colDefs: ColDef<Data>[] = [
     { field: "analyticId", editable: true },
 ];
 
-const getRowId: GetRowIdFunc<Data> = ({data}) => `${data.cardId}-${data.company}`;
+const getRowId: GetRowIdFunc<Data> = ({ data }) => `${data.cardId}-${data.company}`;
 
 export function Grid() {
     const [client] = useState(() => new QueryClient());
@@ -33,27 +33,21 @@ export function Grid() {
         mutationKey: ["updateCardMapping"],
     }, client)
 
-    const handleChange = useCallback(async ({newValue, data}: CellValueChangedEvent<Data, string>) => {
-        await updateCardMapping({...data, analyticId: newValue || ''});
+    const handleChange = useCallback(async ({ newValue, data }: CellValueChangedEvent<Data, string>) => {
+        await updateCardMapping({ ...data, analyticId: newValue || '' });
         await refetch();
     }, []);
 
     return (
-        <div
-            className="ag-theme-quartz"
-            style={{ height: '100%' }}
-        >
-            {!error
-                ? <AgGridReact<Data>
-                    rowData={data}
-                    columnDefs={colDefs}
-                    defaultColDef={defaultColDef}
-                    onCellValueChanged={handleChange}
-                    rowSelection="single"
-                    getRowId={getRowId}
-                />
-                : <div className="error">{error.message}</div>
-            }
-        </div>
+        !error
+            ? <AgGridReact<Data>
+                rowData={data}
+                columnDefs={colDefs}
+                defaultColDef={defaultColDef}
+                onCellValueChanged={handleChange}
+                rowSelection="single"
+                getRowId={getRowId}
+            />
+            : <div className="error">{error.message}</div>
     )
 }
