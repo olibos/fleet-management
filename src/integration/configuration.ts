@@ -150,7 +150,7 @@ function load(key, options){
                         current = current[key];
                     }
 
-                    var targetType: string = options.type;
+                    let targetType: string = options.type;
                     if (options.type === 'enum') {
                         targetType = options.values.map(v => JSON.stringify(v)).join('|');
                     }
