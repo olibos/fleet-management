@@ -5,10 +5,11 @@ let _redirectUri: URL;
 let _msal: ConfidentialClientApplication
 export default {
     get redirectUri() {
-        return _redirectUri ??= new URL('/.auth/login/callback', configuration.site);
+        _redirectUri ??= new URL('/.auth/login/callback', configuration.site);
+        return _redirectUri;
     },
     get msal() {
-        return _msal ??= new ConfidentialClientApplication({
+        _msal ??= new ConfidentialClientApplication({
             auth: {
                 clientId: configuration.msal.applicationId,
                 authority: `https://login.microsoftonline.com/${configuration.msal.applicationTenantId}`,
@@ -24,5 +25,6 @@ export default {
                 }
             }
         });
+        return _msal;
     }
 }
