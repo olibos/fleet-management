@@ -1,6 +1,8 @@
 import { fileURLToPath } from 'node:url';
 import type { AstroConfig, AstroIntegration } from "astro";
 
+type EnvSchema = AstroConfig['env']['schema'][string];
+
 export const VIRTUAL_MODULES_IDS = {
     client: 'wavenet:config/client',
     server: 'wavenet:config/server',
@@ -10,7 +12,7 @@ export const VIRTUAL_MODULES_IDS_VALUES = new Set(Object.values(VIRTUAL_MODULES_
 
 export const ENV_TYPES_FILE = 'config.d.ts';
 
-function getOptions(schema: Record<string, Record<string, unknown>>, key: string) {
+function getOptions(schema: Record<string, EnvSchema>, key: string): Omit<EnvSchema, 'context' | 'access'> {
     const { context, access, ...options } = schema[key] ?? {};
     return options;
 }
