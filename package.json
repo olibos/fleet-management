@@ -35,7 +35,7 @@
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.7",
     "@types/pdfmake": "^0.2.11",
-    "react-compiler-runtime": "19.0.0-beta-df7b47d-20241124",
+    "react-compiler-runtime": "19.0.0-beta-e552027-20250112",
     "sass": "^1.83.1"
   }
 }
