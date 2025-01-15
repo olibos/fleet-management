@@ -374,7 +374,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@azure/msal-node@npm:^2.16.2, @azure/msal-node@npm:^2.9.2":
+"@azure/msal-common@npm:15.0.1":
+  version: 15.0.1
+  resolution: "@azure/msal-common@npm:15.0.1"
+  checksum: 10c0/63c976b3ca55d72ec6a31753062557d6fd2ca461d5927627b370ba43572a41a4815f342f19e943d4363b35bba30aebe0dcb6b9e417430fa7b414d81a08c2cbdf
+  languageName: node
+  linkType: hard
+
+"@azure/msal-node@npm:^2.9.2":
   version: 2.16.2
   resolution: "@azure/msal-node@npm:2.16.2"
   dependencies:
@@ -382,6 +389,17 @@ __metadata:
     jsonwebtoken: "npm:^9.0.0"
     uuid: "npm:^8.3.0"
   checksum: 10c0/0513a12d42fc53f8ddf5d460087621a526000054f92d1874f054736007018de583318d240576e98b5f65a598b66f19b3165b9550dfded8bf07dbcb53a21bb08e
+  languageName: node
+  linkType: hard
+
+"@azure/msal-node@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "@azure/msal-node@npm:3.0.1"
+  dependencies:
+    "@azure/msal-common": "npm:15.0.1"
+    jsonwebtoken: "npm:^9.0.0"
+    uuid: "npm:^8.3.0"
+  checksum: 10c0/22223bed9a88da9cbfca8fbb470005ce85fac9139d71c6e86980d54d32e7d593e1e87fae0b4db81718947b54fe3009a3212ccdb60ee719ad579980745236c962
   languageName: node
   linkType: hard
 
@@ -3639,7 +3657,7 @@ __metadata:
     "@astrojs/check": "npm:0.9.4"
     "@astrojs/node": "npm:9.0.0"
     "@astrojs/react": "npm:4.1.2"
-    "@azure/msal-node": "npm:^2.16.2"
+    "@azure/msal-node": "npm:^3.0.0"
     "@tanstack/react-query": "npm:^5.62.15"
     "@types/jsonwebtoken": "npm:^9.0.7"
     "@types/mssql": "npm:^9.1.6"
