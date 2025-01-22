@@ -108,15 +108,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/node@npm:9.0.0":
-  version: 9.0.0
-  resolution: "@astrojs/node@npm:9.0.0"
+"@astrojs/node@npm:9.0.2":
+  version: 9.0.2
+  resolution: "@astrojs/node@npm:9.0.2"
   dependencies:
     send: "npm:^1.1.0"
     server-destroy: "npm:^1.0.1"
   peerDependencies:
     astro: ^5.0.0
-  checksum: 10c0/fe347fc034e4601da9d9e4488d7f92b399084162d325a8dfc5d7f251b22e7187379e0554f477d980ed4931de14c4cd38f0120aac48739ae004a846c7dfb34cb2
+  checksum: 10c0/124614535c8760ed573c334d5574f714dd56feb361ef7b0630819953eea99db7b3f1644ae20b4ea2bedc5b897ade225d4b773a765d298fcac633d1697b9749fc
   languageName: node
   linkType: hard
 
@@ -3637,7 +3637,7 @@ __metadata:
   resolution: "fleet-management@workspace:."
   dependencies:
     "@astrojs/check": "npm:0.9.4"
-    "@astrojs/node": "npm:9.0.0"
+    "@astrojs/node": "npm:9.0.2"
     "@astrojs/react": "npm:4.1.2"
     "@azure/msal-node": "npm:^2.16.2"
     "@tanstack/react-query": "npm:^5.62.15"
