@@ -1984,13 +1984,13 @@ __metadata:
   linkType: hard
 
 "@types/mssql@npm:^9.1.6":
-  version: 9.1.6
-  resolution: "@types/mssql@npm:9.1.6"
+  version: 9.1.8
+  resolution: "@types/mssql@npm:9.1.8"
   dependencies:
     "@types/node": "npm:*"
     tarn: "npm:^3.0.1"
     tedious: "npm:*"
-  checksum: 10c0/3f4142de4660cb56010b377884a52a620d8cf12b521ea87789bd04134c8d76ac9f37a917bc7fec7a04abf8821042e5a5532540cff5e2a3ee83297d308b0b7357
+  checksum: 10c0/5641ccf9bf7f12b1ce5951147e13a642e78ad01610dd8d6fe02f5de1929006ef6d4d7fcee0ef5875f6f17a759c8bb4ecc399f68efdc7a32e7ebb4634600215b1
   languageName: node
   linkType: hard
 
