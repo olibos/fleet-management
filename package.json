@@ -26,8 +26,8 @@
     "mssql": "^11.0.1",
     "pdfjs-dist": "^4.10.38",
     "pdfmake": "^0.2.18",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
     "tough-cookie": "^5.0.0",
     "typescript": "^5.7.2"
   },
@@ -35,7 +35,7 @@
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.7",
     "@types/pdfmake": "^0.2.11",
-    "react-compiler-runtime": "19.0.0-beta-df7b47d-20241124",
+    "react-compiler-runtime": "19.0.0-beta-ebf51a3-20250411",
     "sass": "^1.83.1"
   }
 }
